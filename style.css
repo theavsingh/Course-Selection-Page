@@ -1,0 +1,271 @@
+/* Base styles and defaults */
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+body {
+    background-color: #f4f6f8; 
+    color: #333;
+    line-height: 1.6; 
+}
+
+/* Main page header styling */
+header {
+    background-color: #004085;
+    color: white;
+    text-align: center; 
+    padding: 40px 20px;
+    border-bottom: 5px solid #d4af37;
+}
+
+nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+.nav-links {
+    display: none;
+    list-style-type: none;
+    justify-content: center;
+    padding: 15px 0;
+    margin: 0;
+}
+
+.nav-links.show {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease; 
+}
+
+.hamburger-btn {
+    display: block; 
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0;
+    position: absolute; 
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger-btn:hover {
+    color: #d4af37;
+}
+
+/* Main layout container */
+main {
+    width: 90%; 
+    max-width: 1200px;
+    margin: 40px auto; 
+}
+
+h2 {
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+/* Dynamic notification banner for selected items */
+.selection-banner {
+    display: none;
+    background-color: #d4af37;
+    color: #002244;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.selection-banner.show {
+    display: block;
+}
+
+/* Program grid and card styles */
+.course-grid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; /* Splits the available programs into two equal columns side-by-side */ 
+    gap: 25px; 
+    margin-bottom: 50px;
+}
+
+.course-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px; 
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+}
+
+.course-card:hover {
+    transform: translateY(-5px); /* Makes the card visually lift up when the user hovers their mouse over it */
+    box-shadow: 0 8px 16px rgba(0, 64, 133, 0.15);
+    border-color: #d4af37;
+}
+
+.course-card h3 {
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.course-code {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Program selection buttons */
+.select-btn {
+    float: right; 
+    background-color: #004085;
+    color: white;
+    border: 2px solid #004085;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.select-btn:hover {
+    background-color: #d4af37;
+    border-color: #d4af37;
+    color: #002244;
+}
+
+.course-card::after {
+    content: "";
+    display: table;
+    clear: both; /* Clears the floating select button so it doesn't accidentally spill out of the bottom of the card */
+}
+
+/* Dynamic styling applied via JavaScript selection */
+.highlight-active {
+    border: 2px solid #d4af37; 
+    background-color: #fcfbf7; 
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+}
+
+.btn-selected {
+    background-color: #d4af37 !important; /* Uses !important to force the button to stay gold even if the user hovers over it again */
+    border: 2px solid #d4af37 !important;
+    color: #002244 !important;
+    font-size: 0; 
+}
+
+.btn-selected::after {
+    content: "Selected ✓";
+    font-size: 1rem;
+}
+
+/* Bottom site footer links and branding layouts */
+.site-footer {
+    background-color: #0a0f1c;
+    color: #d1d5db;
+    margin-top: 60px;
+    padding-top: 40px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.footer-column h4 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.footer-column p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.footer-links {
+    list-style-type: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #d1d5db;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d4af37;
+}
+
+.footer-bottom {
+    background-color: #05080f;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #1a233a;
+}
+
+/* Mobile responsive adjustments */
+/* Forces the navigation links to stack vertically instead of horizontally on small phone screens */
+@media (max-width: 768px) {
+    .hamburger-btn {
+        display: block; 
+        margin: 0 auto;
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .nav-links.show {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 15px;
+    }
+}

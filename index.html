@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Header Block -->
+    <header>
+        <div class="header-container" style="position: relative;">
+            <button id="mobile-menu-btn" class="hamburger-btn">☰</button>
+            
+            <div class="course-title">
+                <h1>Course Selection Portal</h1>
+                <p>South Asian University, Delhi</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Navigation Links -->
+    <nav>
+        <ul id="main-nav" class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Programmes</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="programmes" class="course-section">
+            <h2>Available Programmes</h2>            
+            <div id="selection-banner" class="selection-banner"></div>
+
+            <!-- 4. Course Cards Grid -->
+            <div class="course-grid">
+                <div class="course-card">
+                    <h3>B.Tech. (Computer Science & Engineering)</h3>
+                    <p class="course-code">Code: UG-CSE</p>
+                    <p class="department">Dept: Department of Computer Science and Engineering (DCSE)</p>
+                    <p class="description">Undergraduate programme focusing on core computer science principles, software development, and engineering.</p>
+                    <button class="select-btn" data-course-name="B.Tech. (Computer Science & Engineering)" data-course-code="UG-CSE">Select Programme</button>
+                </div>
+
+                <div class="course-card">
+                    <h3>Dual Degree B.Tech. + M.Tech. (Computer Science & Engineering)</h3>
+                    <p class="course-code">Code: DD-CSE</p>
+                    <p class="department">Dept: Department of Computer Science and Engineering (DCSE)</p>
+                    <p class="description">An integrated dual degree programme combining undergraduate fundamentals with advanced postgraduate research.</p>
+                    <button class="select-btn" data-course-name="Dual Degree B.Tech. + M.Tech. (CSE)" data-course-code="DD-CSE">Select Programme</button>
+                </div>
+
+                <div class="course-card">
+                    <h3>B.Tech. (Mathematics & Computing)</h3>
+                    <p class="course-code">Code: UG-MAC</p>
+                    <p class="department">Dept: Department of Mathematics (DM) / DCSE</p>
+                    <p class="description">Interdisciplinary programme blending advanced mathematical theories with computer science applications.</p>
+                    <button class="select-btn" data-course-name="B.Tech. (Mathematics & Computing)" data-course-code="UG-MAC">Select Programme</button>
+                </div>
+
+                <div class="course-card">
+                    <h3>MCA (Master of Computer Applications)</h3>
+                    <p class="course-code">Code: PG-MCA</p>
+                    <p class="department">Dept: Department of Computer Science and Engineering (DCSE)</p>
+                    <p class="description">Postgraduate programme emphasizing modern application development, software tools, and IT management.</p>
+                    <button class="select-btn" data-course-name="MCA (Master of Computer Applications)" data-course-code="PG-MCA">Select Programme</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 3. Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Course Portal</h4>
+                <p>Maidan Garhi, New Delhi 110068</p>
+                <p>Email: support@courseselection.edu</p>
+                <p>Phone: +91 (11) 555-0198</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#programmes">All Programmes</a></li>
+                    <li><a href="#about">About Portal</a></li>
+                    <li><a href="#contact">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Student Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Academic Calendar</a></li>
+                    <li><a href="#">Registration Guide</a></li>
+                    <li><a href="#">IT Helpdesk</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 aditya vikram singh | Fundamentals of Web Development</p>
+        </div>
+    </footer>
+
+    <!-- 4. Script Tag -->
+    <script src="script.js"></script>
+</body>
+</html>
